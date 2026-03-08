@@ -8,11 +8,11 @@ Tras el análisis de las métricas de validación y las matrices de confusión, 
 **_2. Desglose de Errores Principales_**
 
 _A. Predominancia de Falsos Negativos (FN)_
-El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo omite objetos presentes en la escena.
+El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo es "conservador" y omite objetos presentes en la escena, antes que presentar una etiqueta "mal" puesta. 
 
 **Impacto:** El sistema no logra marcar elementos existentes, lo que podría derivar en reportes incompletos de avance de obra o inventario.
 
-**Posibles Causas:** * Oclusiones: Elementos parcialmente cubiertos por andamios, maquinaria o personal de obra.
+**Posibles Causas:** Oclusiones: Elementos parcialmente cubiertos por andamios, maquinaria o personal de obra.
 
 **Variabilidad de Iluminación:** Sombras densas o sobreexposición en tomas exteriores que difuminan los bordes de los objetos.
 

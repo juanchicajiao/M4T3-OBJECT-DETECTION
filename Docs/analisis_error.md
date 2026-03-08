@@ -8,34 +8,32 @@ Tras el análisis de las métricas de validación y las matrices de confusión, 
 **_2. Desglose de Errores Principales_**
 
 _A. Predominancia de Falsos Negativos (FN)_
-El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo es "conservador" y omite objetos presentes en la escena, antes que presentar una etiqueta "mal" puesta. 
+El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo es "conservador" y omite objetos presentes en la escena, antes que presentar una etiqueta "mal" puesta.
 
 **Impacto:** El sistema no logra marcar elementos existentes, lo que podría derivar en reportes incompletos de avance de obra o inventario.
 
-**Posibles Causas:** Oclusiones: Elementos parcialmente cubiertos por andamios, maquinaria o personal de obra.
+**Oclusiones:** Elementos parcialmente cubiertos por andamios, maquinaria o personal de obra.
 
-**Variabilidad de Iluminación:** Sombras densas o sobreexposición en tomas exteriores que difuminan los bordes de los objetos.
-
-**Escala:** Dificultad para detectar objetos de dimensiones pequeñas en tomas de gran angular (vistas generales de la losa o fachada).
+**Escala:** Dificultad para detectar objetos de dimensiones pequeñas en tomas de gran angular.
 
 _B. Confusión de Clases (Errores de Clasificación)_
-Se ha detectado que el modelo confunde ciertas categorías entre sí. Esto ocurre principalmente en elementos que comparten texturas o geometrías similares dentro del sector AECO.
+Se ha detectado que el modelo confunde ciertas categorías entre sí. Es decir marca un objeto pero con la etiqueta equivocada. 
 
-**Ejemplos detectados:** Confusión entre tipos de tuberías (hidrosanitarias vs. eléctricas) o entre distintos tipos de herramental de encofrado.
+**Ejemplos detectados:** Confusión entre vestimenta y chaleco, o entre una herramienta y un casco
 
 **Causa:** Similitud visual en el set de datos de entrenamiento y falta de características distintivas claras en imágenes de baja resolución.
 
 **_3. Matriz de Confusión y Métricas_**
 A continuación, se describen las tendencias observadas en la matriz de salida:
 
-**Precisión:** Relativamente alta (pocos Falsos Positivos), lo que indica que cuando el modelo detecta algo, suele ser correcto.
+**Precisión:** Media, en general lo marcado está bien aunque omite partes importantes. No realciona la aparición de una clase con otra como correlación, es decir, identifica el casco pero no al obrero quien lo usa. 
 
 **Exhaustividad:** Baja, confirmando la tendencia de omitir etiquetas necesarias.
 
 **_4. Plan de Acción y Mejoras_**
 Para mitigar los errores actuales, se proponen las siguientes acciones en el próximo ciclo de entrenamiento:
 
-**Aumento de Datos:** Aplicar técnicas de tiling (división de imágenes) para mejorar la detección de objetos pequeños y aumentar la exposición artificial para robustecer el modelo ante sombras.
+**Aumento de Datos:** Aplicar técnicas de tiling (división de imágenes) para mejorar la detección de objetos pequeños y aumentar la exposición artificial para robustecer el modelo ante variabilidad entre imágenes.
 
 **Refinamiento del Dataset:** Revisar el etiquetado en Roboflow para asegurar que no existan objetos sin marcar en el set de entrenamiento, lo cual alimenta directamente la generación de Falsos Negativos.
 

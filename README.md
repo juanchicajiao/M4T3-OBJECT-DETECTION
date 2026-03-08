@@ -21,4 +21,4 @@ Detección de Objetos en Sitios de Construcción con Roboflow
 2. Pega tu contraseña API Key de Roboflow
 3. Ejecuta todas las celdas
 
-Resultados: 
+Resultados:

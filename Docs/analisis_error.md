@@ -6,7 +6,8 @@ _**Análisis de Errores del Modelo de Detección de Objetos (AECO)**_
 Tras el análisis de las métricas de validación y las matrices de confusión, se observa que el modelo es capaz de identificar elementos clave en obra, pero presenta retos específicos en la exhaustividad de la detección y en la discriminación de clases con características morfológicas similares.
 
 **_2. Desglose de Errores Principales_**
-A. Predominancia de Falsos Negativos (FN)
+
+_A. Predominancia de Falsos Negativos (FN)_
 El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo omite objetos presentes en la escena.
 
 **Impacto:** El sistema no logra marcar elementos existentes, lo que podría derivar en reportes incompletos de avance de obra o inventario.

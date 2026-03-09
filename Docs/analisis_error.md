@@ -2,10 +2,10 @@
 # _**Análisis de Errores del Modelo de Detección de Objetos (AECO)**_
 
 
-**_1. Resumen Ejecutivo del Desempeño_**
+## **_1. Resumen Ejecutivo del Desempeño_**
 Tras el análisis de las métricas de validación y las matrices de confusión, se observa que el modelo es capaz de identificar elementos clave en obra, pero presenta retos específicos en la exhaustividad de la detección y en la discriminación de clases con características morfológicas similares.
 
-**_2. Desglose de Errores Principales_**
+## **_2. Desglose de Errores Principales_**
 
 _A. Predominancia de Falsos Negativos (FN)_
 El error más crítico identificado es la tasa de Falsos Negativos, lo que significa que el modelo es "conservador" y omite objetos presentes en la escena, antes que presentar una etiqueta "mal" puesta.
@@ -23,14 +23,14 @@ Se ha detectado que el modelo confunde ciertas categorías entre sí. Es decir m
 
 **Causa:** Similitud visual en el set de datos de entrenamiento y falta de características distintivas claras en imágenes de baja resolución.
 
-**_3. Matriz de Confusión y Métricas_**
+## **_3. Matriz de Confusión y Métricas_**
 A continuación, se describen las tendencias observadas en la matriz de salida:
 
 **Precisión:** Media, en general lo marcado está bien aunque omite partes importantes. No realciona la aparición de una clase con otra como correlación, es decir, identifica el casco pero no al obrero quien lo usa. 
 
 **Exhaustividad:** Baja, confirmando la tendencia de omitir etiquetas necesarias.
 
-**_4. Plan de Acción y Mejoras_**
+## **_4. Plan de Acción y Mejoras_**
 Para mitigar los errores actuales, se proponen las siguientes acciones en el próximo ciclo de entrenamiento:
 
 **Aumento de Datos:** Aplicar técnicas de tiling (división de imágenes) para mejorar la detección de objetos pequeños y aumentar la exposición artificial para robustecer el modelo ante variabilidad entre imágenes.

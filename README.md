@@ -26,3 +26,22 @@ Detección de Objetos en Sitios de Construcción con Roboflow
 <img width="2400" height="1200" alt="results" src="https://github.com/user-attachments/assets/a7fb311e-a120-42c9-ae26-93b05dc79644" />
 
 
+**Reproducibility Test**
+Last successful execution: 2026-03-09 21:19
+
+Environment: Google Colab
+GPU: Tesla T4 (or equivalent)
+
+Training Metrics
+Results file: runs/detect/train/results.csv
+
+Training Curves:<img width="2400" height="1200" alt="metricas" src="https://github.com/user-attachments/assets/5e7d58c5-0420-4661-b776-655eb3bafbde" />
+confusion matrix:<img width="3000" height="2250" alt="confusion" src="https://github.com/user-attachments/assets/fccbfc98-f533-49e5-99bd-c875bf8ff261" />
+
+Notes
+This report was generated automatically after training.
+Expected runtime:
+Full training: 20–30 min
+Inference: <2 min
+
+

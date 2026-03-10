@@ -2,8 +2,8 @@
 # _**Análisis de Errores del Modelo de Detección de Objetos (AECO)**_
 
 
-## **_1. Resumen Ejecutivo del Desempeño_**
-Tras el análisis de las métricas de validación y las matrices de confusión, se observa que el modelo es capaz de identificar elementos clave en obra, pero presenta retos específicos en la exhaustividad de la detección y en la discriminación de clases con características morfológicas similares.
+## **_1. Resumen de Desempeño_**
+Tras el análisis de las métricas de validación y las matrices de confusión, se observa que el modelo es capaz de identificar elementos clave en obra, pero presenta retos específicos en la exhaustividad de la detección y en la discriminación de clases con características morfológicas similares, y sobre todo una predominancia de los FN.
 
 ## **_2. Desglose de Errores Principales_**
 
@@ -22,6 +22,34 @@ Se ha detectado que el modelo confunde ciertas categorías entre sí. Es decir m
 **Ejemplos detectados:** Confusión entre vestimenta y chaleco, o entre una herramienta y un casco
 
 **Causa:** Similitud visual en el set de datos de entrenamiento y falta de características distintivas claras en imágenes de baja resolución.
+
+**Falsos Negativos:**
+
+![FalsoNegativo1](https://github.com/user-attachments/assets/f0d6ef4b-8bb7-4a65-8f46-eb524739e97f)
+
+1. Se identifica el casco pero no al obrero ni al chaleco claramente representados en la imagen
+
+![FalsoNegativo2](https://github.com/user-attachments/assets/cb32f634-478a-4dc7-aaa0-541dc84ed999)
+
+2. No se identifica al segundo obrero en esta imagen. Podría darse por una obstrucción en la figura completa de la persona.
+
+![FalsoNegativo3](https://github.com/user-attachments/assets/bf2fcf6c-826d-43ac-9546-36afb51673df)
+
+3. Se identifica al obrero pero no al chaleco y tampoco la ausencia del casco.
+
+**Falsos Positivos:**
+
+![FalsoPositivo1](https://github.com/user-attachments/assets/23d9891b-306d-4d81-ad8c-fa7280b8e008)
+
+1. Se identifica un casco inexistente en la cabeza del obrero. Se puede originar en una falla de iluminación en esa zona.
+
+![FalsoPositivo3](https://github.com/user-attachments/assets/fc12365a-ad82-4dd1-936e-6531528d1263)
+
+2. En esta imagen se indetifican dos obreros y dos chalecos, cuando en realidad solamente hay un obrero y un chaleco.
+
+![FalsoPositivo2](https://github.com/user-attachments/assets/c8b3c290-de26-4cc5-8c9f-155a85d48252)
+
+3. Similar a la anterior, se identifican dos obreros sin una razón en específico ya que la figura no se interrumpe. 
 
 ## **_3. Matriz de Confusión y Métricas_**
 A continuación, se describen las tendencias observadas en la matriz de salida:

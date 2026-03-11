@@ -27,7 +27,7 @@ Detección de Objetos en Sitios de Construcción con Roboflow
 
 
 ---
-**RESUMEN Y REPORTE:**
+**Resumen Y Reporte:**
 
 [YOLO Detection Roboflow + Colab.pdf](https://github.com/user-attachments/files/25920095/YOLO.Detection.Roboflow.%2B.Colab.pdf)
 

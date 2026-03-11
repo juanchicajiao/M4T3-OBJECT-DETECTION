@@ -26,6 +26,13 @@ Detección de Objetos en Sitios de Construcción con Roboflow
 <img width="2400" height="1200" alt="results" src="https://github.com/user-attachments/assets/a7fb311e-a120-42c9-ae26-93b05dc79644" />
 
 
+---
+**RESUMEN Y REPORTE:**
+
+[YOLO Detection Roboflow + Colab.pdf](https://github.com/user-attachments/files/25920095/YOLO.Detection.Roboflow.%2B.Colab.pdf)
+
+
+
 **Reproducibility Test**
 Last successful execution: 2026-03-09 21:19
 

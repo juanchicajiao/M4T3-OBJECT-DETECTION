@@ -33,7 +33,8 @@ Detección de Objetos en Sitios de Construcción con Roboflow
 
 ---
 
-**Reproducibility Test**
+**Reproducibility Test:**
+
 Last successful execution: 2026-03-09 21:19
 
 Environment: Google Colab
